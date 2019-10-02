@@ -11,4 +11,4 @@ For `image_ingest` package; contains
 * pymongo
 * requests
 
-*size about 40MB/190MB*
+*size about 41MB/129MB*

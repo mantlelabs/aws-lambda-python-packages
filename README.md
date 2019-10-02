@@ -1,3 +1,5 @@
+Also see mkdocs!
+
 # aws-lambda-python
 
 How to create powerful AWS lambda python function that fits in a 250Mb package
