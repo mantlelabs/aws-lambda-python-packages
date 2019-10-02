@@ -9,6 +9,23 @@ More info: https://blog.mapbox.com/aws-lambda-python-magic-e0f6a407ffc6
 
 ## Lambda package
 
+### Rasterio, Fiona, other
+
+Lightweight python package with rasterio, fiona and a few others
+
+**Updated to use the lambci base image!**
+
+- Modules:
+  - numpy
+  - rasterio
+  - fiona
+  - pandas
+  - pymongo
+  - requests
+- Command: `make r_f`
+- Package size: 41Mb (129Mb)
+
+
 ### Rasterio
 
 Lightweight python package with rasterio

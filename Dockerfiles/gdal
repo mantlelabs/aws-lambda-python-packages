@@ -1,4 +1,4 @@
-FROM lambda:python3.6
+FROM lambci/lambda:build-python3.7
 
 ################################################################################
 #                                INSTALL GDAL                                  #
@@ -14,7 +14,7 @@ ENV PROJ_VERSION 4.9.3
 RUN cd $APP_DIR \
    && wget -q https://github.com/OSGeo/proj.4/archive/$PROJ_VERSION.zip \
    && unzip $PROJ_VERSION.zip \
-   && cd proj.4-$PROJ_VERSION \
+   && cd PROJ-$PROJ_VERSION \
    && sh autogen.sh \
    && ./configure CFLAGS="-O2 -Wl,-S" --prefix=$APP_DIR/local \
    && make && make install && make clean \

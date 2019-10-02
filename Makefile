@@ -39,6 +39,13 @@ geospatial:
 	docker stop lambda
 	docker rm lambda
 
+r_f:
+	docker build -f Dockerfiles/gdal --tag lambda:gdal .
+	docker build -f Dockerfiles/r_f --tag lambda:r_f .
+	docker run --rm --name lambda -itd lambda:r_f bash
+	docker cp lambda:/tmp/package.zip package_r_f.zip
+	docker stop lambda
+
 opencv:
 	docker build -f Dockerfiles/python3.6 --tag lambda:python3.6 .
 	docker build -f Dockerfiles/opencv --tag lambda:opencv .
